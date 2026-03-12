@@ -220,20 +220,6 @@ func (d *Document) adjustFormatsForDelete(pos int, length int) {
 	d.Formats = newFormats
 }
 
-func min(a int, b int) int {
-	if a < b {
-		return a
-	}
-	return b
-}
-
-func max(a int, b int) int {
-	if a > b {
-		return a
-	}
-	return b
-}
-
 func (d *Document) insertWithoutRecord(position int, data string) {
 	if d.Doc.Head == nil {
 		node := &Node[string]{Data: data, Cap: 10}
